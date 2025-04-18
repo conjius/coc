@@ -16,7 +16,21 @@ endif()
 find_package(raylib REQUIRED CONFIG)
 
 # Build your app
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME}
+		src/main.cpp
+		src/core/GameState.cpp
+		src/core/GameState.h
+		src/Game.cpp
+		src/Game.h
+		src/core/Board.cpp
+		src/core/Board.h
+		src/core/Player.cpp
+		src/core/Player.h
+		src/core/Tile.cpp
+		src/core/Tile.h
+		src/core/Hex.cpp
+		src/core/Hex.h
+		src/core/TerrainType.h)
 
 # Link against the imported raylib target
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)

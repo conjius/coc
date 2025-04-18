@@ -1,13 +1,20 @@
 #pragma once
-#include "TerrainType.h"
+#include <vector>
 
+#include "TerrainType.h"
+#include "units/Unit.h"
+
+using std::vector;
 
 class Hex {
 public:
-    explicit Hex(const TerrainType& terrainType)
-        : terrainType(terrainType) {
+    explicit Hex(const TerrainType& terrainType, const vector<Unit>& units)
+        : terrainType(terrainType), units(units) {
     }
 
 private:
-    TerrainType terrainType;
+    const TerrainType& terrainType;
+    const vector<Unit>& units;
+    bool isExhausted = false;
+    bool isSettled = false;
 };

@@ -30,7 +30,9 @@ add_executable(${PROJECT_NAME}
 		src/core/Tile.h
 		src/core/Hex.cpp
 		src/core/Hex.h
-		src/core/TerrainType.h)
+		src/core/TerrainType.h
+		src/core/units/Unit.cpp
+		src/core/units/Unit.h)
 
 # Link against the imported raylib target
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)

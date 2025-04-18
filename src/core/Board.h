@@ -7,5 +7,5 @@ using std::map;
 using std::pair;
 
 class Board {
-    map<pair<char, char>, Tile> tiles;
+    const map<pair<char, char>, Tile>& tiles;
 };

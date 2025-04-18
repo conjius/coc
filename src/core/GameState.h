@@ -10,7 +10,7 @@ using std::string;
 using std::map;
 
 class GameState {
-    Board board;
+    const Board& board;
     std::map<string, Player> players;
 
 public:

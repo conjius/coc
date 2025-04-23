@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 project(coc LANGUAGES C CXX)
 
-# Use C++17
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -32,7 +31,11 @@ add_executable(${PROJECT_NAME}
 		src/core/Hex.h
 		src/core/TerrainType.h
 		src/core/units/Unit.cpp
-		src/core/units/Unit.h)
+		src/core/units/Unit.h
+		src/FrameDrawer.cpp
+		src/FrameDrawer.h
+		src/core/GameManager.cpp
+		src/core/GameManager.h)
 
 # Link against the imported raylib target
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
